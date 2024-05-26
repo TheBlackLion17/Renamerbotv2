@@ -2,7 +2,7 @@ import os
 from pyrogram import Client, filters
 from helper.date import add_date
 from helper.database import uploadlimit , usertype,addpre
-ADMIN = int(os.environ.get("ADMIN", 6045914761))
+ADMIN = int(os.environ.get("ADMIN", 6976445947))
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,ForceReply)
 
 
@@ -42,7 +42,7 @@ async def vip1(bot,update):
 	id = update.message.reply_to_message.text.split("/addpremium")
 	user_id = id[1].replace(" ", "")
 	inlimit  = 21474836480
-	uploadlimit(int(user_id),21474836480)
+	uploadlimit(int(user_id),6976445947)
 	usertype(int(user_id),"🪙 𝐒𝐢𝐥𝐯𝐞𝐫 𝐓𝐢𝐞𝐫 🪙")
 	addpre(int(user_id))
 	await update.message.edit("ᴜᴘʟᴏᴀᴅ  ʟɪᴍɪᴛ  ɪɴᴄʀᴇᴀꜱᴇᴅ  ᴛᴏ  20 ɢʙ  ᴘᴇʀ  ᴅᴀʏ.")
@@ -53,7 +53,7 @@ async def vip2(bot,update):
 	id = update.message.reply_to_message.text.split("/addpremium")
 	user_id = id[1].replace(" ", "")
 	inlimit  = 53687091200
-	uploadlimit(int(user_id),53687091200)
+	uploadlimit(int(user_id),6976445947)
 	usertype(int(user_id),"💫 𝐆𝐨𝐥𝐝 𝐓𝐢𝐞𝐫 💫")
 	addpre(int(user_id))
 	await update.message.edit("ᴜᴘʟᴏᴀᴅ  ʟɪᴍɪᴛ  ɪɴᴄʀᴇᴀꜱᴇᴅ  ᴛᴏ  50 ɢʙ  ᴘᴇʀ  ᴅᴀʏ.")
@@ -63,7 +63,7 @@ async def vip3(bot,update):
 	id = update.message.reply_to_message.text.split("/addpremium")
 	user_id = id[1].replace(" ", "")
 	inlimit = 1073741824000
-	uploadlimit(int(user_id), 1073741824000)
+	uploadlimit(int(user_id), 6976445947)
 	usertype(int(user_id),"💎 𝐃𝐢𝐚𝐦𝐨𝐧𝐝 𝐓𝐢𝐞𝐫 💎")
 	addpre(int(user_id))
 	await update.message.edit("ᴜᴘʟᴏᴀᴅ  ʟɪᴍɪᴛ  ɪɴᴄʀᴇᴀꜱᴇᴅ  ᴛᴏ  Unlimited  ᴘᴇʀ  ᴅᴀʏ.")
@@ -74,7 +74,7 @@ async def dft(bot,update):
 	id = update.message.reply_to_message.text.split("/resetpower")
 	user_id = id[1].replace(" ", "")
 	inlimit = 1073741824
-	uploadlimit(int(user_id), 10737418240)
+	uploadlimit(int(user_id), 6976445947)
 	usertype(int(user_id),"🦋 𝐅𝐫𝐞𝐞 𝐏𝐥𝐚𝐧 𝐔𝐬𝐞𝐫 🦋")
 	addpre(int(user_id))
 	await update.message.edit("ᴜꜱᴇʀ  ʟɪᴍɪᴛ  ʜᴀꜱ  ʙᴇᴇɴ  ʀᴇꜱᴇᴛ  ꜱᴜᴄᴄᴇꜱꜱꜱꜰᴜʟʟʏ.")
