@@ -32,13 +32,13 @@ else:
 #-------------------------------
 	    
 @Client.on_message(filters.private & filters.command(["start"]))
-async def start(client,message):
-	old = insert(int(message.chat.id))
-	try:
-	    id = message.text.split(' ')[1]
-	except:
-            txt = f"""Hello {wish} {message.from_user.first_name } \n\nI am a file renamer bot. Please send any Telegram document, video, or audio and enter a new filename to rename it."""
-	    await message.reply_photo(photo=LAZY_PIC,
+async def start(client, message):
+    old = insert(int(message.chat.id))
+    try:
+        id = message.text.split(' ')[1]
+    except:
+        txt = f"""Hello {wish} {message.from_user.first_name } \n\nI am a file renamer bot. Please send any Telegram document, video, or audio and enter a new filename to rename it."""
+        await message.reply_photo(photo=LAZY_PIC,
                                   caption=txt,
                                   reply_markup=InlineKeyboardMarkup(
                                       [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/LazyDeveloper")],
@@ -47,11 +47,11 @@ async def start(client,message):
                                         InlineKeyboardButton("Movie Channel", url='https://t.me/real_MoviesAdda2')],
                                        [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://p.paytm.me/xCTH/vo37hii9')]
                                        ]))
-	    return
-	if id:
-	    if old == True:
-	        try:
-	            await client.send_message(id, "Your friend is already using our bot.")
+        return
+    if id:
+        if old == True:
+            try:
+                await client.send_message(id, "Your friend is already using our bot.")
                 await message.reply_photo(photo=LAZY_PIC,
                                           caption=txt,
                                           reply_markup=InlineKeyboardMarkup(
@@ -61,15 +61,15 @@ async def start(client,message):
                                                 InlineKeyboardButton("Movie Channel", url='https://t.me/real_MoviesAdda2')],
                                                [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://p.paytm.me/xCTH/vo37hii9')]
                                                ]))
-	        except:
-	             return
-	    else:
-	         await client.send_message(id,"ʏᴏᴜ  ᴡᴏɴ  100 ᴍʙ  ᴇxᴛʀᴀ  ᴜᴘʟᴏᴀᴅ  ʟɪᴍɪᴛ  😊")
-	         _user_= find_one(int(id))
-	         limit = _user_["uploadlimit"]
-	         new_limit = limit + 104857600
-	         uploadlimit(int(id),new_limit)
-	         await message.reply_text(text=f"""
+            except:
+                return
+        else:
+            await client.send_message(id, "Congrats! You won 100MB upload limit.")
+            _user_ = find_one(int(id))
+            limit = _user_["uploadlimit"]
+            new_limit = limit + 104857600
+            uploadlimit(int(id), new_limit)
+            await message.reply_text(text=f"""
 Hello {wish} {message.from_user.first_name }\n\n
 I am a file renamer bot. Please send any Telegram document, video, or audio and enter a new filename to rename it.
 """, reply_to_message_id=message.id,
