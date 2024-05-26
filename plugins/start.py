@@ -14,6 +14,7 @@ CHANNEL = os.environ.get('CHANNEL',"")
 import datetime
 from datetime import date as date_
 STRING = os.environ.get("STRING","")
+LAZY_PIC = os.environ.get("LAZY_PIC", "")
 log_channel = int(os.environ.get("LOG_CHANNEL",""))
 token = os.environ.get('TOKEN','')
 botid = token.split(':')[0]
@@ -36,15 +37,30 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
-	    await message.reply_text(text =f"""Hᴇʟʟᴏ {message.from_user.mention}\n\n➻ Tʜɪꜱ Iꜱ Aɴ Aᴅᴠᴀɴᴄᴇᴅ Aɴᴅ Yᴇᴛ Pᴏᴡᴇʀꜰᴜʟ Rᴇɴᴀᴍᴇ Bᴏᴛ.\n\n➻ Uꜱɪɴɢ Tʜɪꜱ Bᴏᴛ Yᴏᴜ Cᴀɴ Rᴇɴᴀᴍᴇ Aɴᴅ Cʜᴀɴɢᴇ Tʜᴜᴍʙɴᴀɪʟ Oғ Yᴏᴜʀ Fɪʟᴇꜱ.\n\n➻ Yᴏᴜ Cᴀɴ Aʟꜱᴏ Cᴏɴᴠᴇʀᴛ Vɪᴅᴇᴏ Tᴏ Fɪʟᴇ Aɴᴅ Fɪʟᴇ Tᴏ Vɪᴅᴇᴏ.\n\n➻ Tʜɪꜱ Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛꜱ Cᴜꜱᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ Aɴᴅ Cᴜꜱᴛᴏᴍ Cᴀᴘᴛɪᴏɴ.\n\nBᴏᴛ Is Mᴀᴅᴇ Bʏ @MrSagarBots""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚚     BOT CHANNEL    ⚚', url='https://t.me/MrSagarBots')],[InlineKeyboardButton('👨‍💻 OWNER', url='https://t.me/MrSagar0'),InlineKeyboardButton('⚡️ PREMIUM PLANS ⚡️', callback_data = "upgrade")]]))
+            txt = f"""Hello {wish} {message.from_user.first_name } \n\nI am a file renamer bot. Please send any Telegram document, video, or audio and enter a new filename to rename it."""
+	    await message.reply_photo(photo=LAZY_PIC,
+                                  caption=txt,
+                                  reply_markup=InlineKeyboardMarkup(
+                                      [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/LazyDeveloper")],
+                                       [InlineKeyboardButton("🦋 Subscribe us 🦋", url="https://youtube.com/@LazyDeveloperr")],
+                                       [InlineKeyboardButton("Support Group", url='https://t.me/LazyPrincessSupport'),
+                                        InlineKeyboardButton("Movie Channel", url='https://t.me/real_MoviesAdda2')],
+                                       [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://p.paytm.me/xCTH/vo37hii9')]
+                                       ]))
 	    return
 	if id:
 	    if old == True:
 	        try:
-	            await client.send_message(id,"ʏᴏᴜʀ  ꜰʀɪᴇɴᴅ  ᴀʟʀᴇᴀᴅʏ  ᴜꜱɪɴɢ  ᴍᴇ")
-	            await message.reply_text(text =f"""Hᴇʟʟᴏ {message.from_user.mention}\n\n➻ Tʜɪꜱ Iꜱ Aɴ Aᴅᴠᴀɴᴄᴇᴅ Aɴᴅ Yᴇᴛ Pᴏᴡᴇʀꜰᴜʟ Rᴇɴᴀᴍᴇ Bᴏᴛ.\n\n➻ Uꜱɪɴɢ Tʜɪꜱ Bᴏᴛ Yᴏᴜ Cᴀɴ Rᴇɴᴀᴍᴇ Aɴᴅ Cʜᴀɴɢᴇ Tʜᴜᴍʙɴᴀɪʟ Oғ Yᴏᴜʀ Fɪʟᴇꜱ.\n\n➻ Yᴏᴜ Cᴀɴ Aʟꜱᴏ Cᴏɴᴠᴇʀᴛ Vɪᴅᴇᴏ Tᴏ Fɪʟᴇ Aɴᴅ Fɪʟᴇ Tᴏ Vɪᴅᴇᴏ.\n\n➻ Tʜɪꜱ Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛꜱ Cᴜꜱᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ Aɴᴅ Cᴜꜱᴛᴏᴍ Cᴀᴘᴛɪᴏɴ.\n\nBᴏᴛ Is Mᴀᴅᴇ Bʏ @MrSagarBots""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚚      BOT CHANNEL     ⚚', url='https://t.me/MrSagarBots')],[InlineKeyboardButton('👨‍💻 OWNER', url='https://t.me/MrSagar0'),InlineKeyboardButton('⚡️ PREMIUM PLANS ⚡️', callback_data = "upgrade")]]))
+	            await client.send_message(id, "Your friend is already using our bot.")
+                await message.reply_photo(photo=LAZY_PIC,
+                                          caption=txt,
+                                          reply_markup=InlineKeyboardMarkup(
+                                              [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/LazyDeveloper")],
+                                               [InlineKeyboardButton("🦋 Subscribe us 🦋", url="https://youtube.com/@LazyDeveloperr")],
+                                               [InlineKeyboardButton("Support Group", url='https://t.me/LazyPrincessSupport'),
+                                                InlineKeyboardButton("Movie Channel", url='https://t.me/real_MoviesAdda2')],
+                                               [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://p.paytm.me/xCTH/vo37hii9')]
+                                               ]))
 	        except:
 	             return
 	    else:
@@ -53,8 +69,17 @@ async def start(client,message):
 	         limit = _user_["uploadlimit"]
 	         new_limit = limit + 104857600
 	         uploadlimit(int(id),new_limit)
-	         await message.reply_text(text =f"""Hᴇʟʟᴏ {message.from_user.mention}\n\n➻ Tʜɪꜱ Iꜱ Aɴ Aᴅᴠᴀɴᴄᴇᴅ Aɴᴅ Yᴇᴛ Pᴏᴡᴇʀꜰᴜʟ Rᴇɴᴀᴍᴇ Bᴏᴛ.\n\n➻ Uꜱɪɴɢ Tʜɪꜱ Bᴏᴛ Yᴏᴜ Cᴀɴ Rᴇɴᴀᴍᴇ Aɴᴅ Cʜᴀɴɢᴇ Tʜᴜᴍʙɴᴀɪʟ Oғ Yᴏᴜʀ Fɪʟᴇꜱ.\n\n➻ Yᴏᴜ Cᴀɴ Aʟꜱᴏ Cᴏɴᴠᴇʀᴛ Vɪᴅᴇᴏ Tᴏ Fɪʟᴇ Aɴᴅ Fɪʟᴇ Tᴏ Vɪᴅᴇᴏ.\n\n➻ Tʜɪꜱ Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛꜱ Cᴜꜱᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ Aɴᴅ Cᴜꜱᴛᴏᴍ Cᴀᴘᴛɪᴏɴ.\n\nBᴏᴛ Is Mᴀᴅᴇ Bʏ @MrSagarBots""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚚      BOT CHANNEL     ⚚', url='https://t.me/MrSagarBots')],[InlineKeyboardButton('👨‍💻 OWNER', url='https://t.me/MrSagar0'),InlineKeyboardButton('⚡️ PREMIUM PLANS ⚡️', callback_data = "upgrade")]]))
+	         await message.reply_text(text=f"""
+Hello {wish} {message.from_user.first_name }\n\n
+I am a file renamer bot. Please send any Telegram document, video, or audio and enter a new filename to rename it.
+""", reply_to_message_id=message.id,
+                                     reply_markup=InlineKeyboardMarkup(
+                                         [[InlineKeyboardButton("🔺 Update Channel 🔺", url="https://t.me/LazyDeveloper")],
+                                          [InlineKeyboardButton("🦋 Subscribe us 🦋", url="https://youtube.com/@LazyDeveloperr")],
+                                          [InlineKeyboardButton("Support Group", url='https://t.me/LazyPrincessSupport'),
+                                           InlineKeyboardButton("Movie Channel", url='https://t.me/real_MoviesAdda2')],
+                                          [InlineKeyboardButton("☕ Buy Me A Coffee ☕", url='https://p.paytm.me/xCTH/vo37hii9')]
+                                          ]))
 	         
 
 @Client.on_message((filters.private &( filters.document | filters.audio | filters.video )) | filters.channel & (filters.document | filters.audio | filters.video))
