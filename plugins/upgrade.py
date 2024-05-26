@@ -36,10 +36,10 @@ async def upgrade(bot,update):
 	keybord = InlineKeyboardMarkup(
                 [
                     [
-            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ  ᴛᴏ  ᴏᴡɴᴇʀ  ❣️',url='https://t.me/MrSagar0')
+            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ  ᴛᴏ  ᴏᴡɴᴇʀ  ❣️',url='https://t.me/Gal_GadotV1_bot')
             ],
                     [
-            InlineKeyboardButton('ʙᴜʏ   ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ   😊',url='https://t.me/MrSagar0')
+            InlineKeyboardButton('ʙᴜʏ   ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ   😊',url='https://t.me/Gal_GadotV1_bot')
             ],
                     [
                         InlineKeyboardButton("Cancel", callback_data = "cancel")
@@ -83,10 +83,10 @@ async def upgradecm(bot,message):
 	keybord = InlineKeyboardMarkup(
                 [
                     [
-            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ  ᴛᴏ  ᴏᴡɴᴇʀ  ❣️',url='https://t.me/MrSagar0')
+            InlineKeyboardButton('ᴄᴏɴᴛᴀᴄᴛ  ᴛᴏ  ᴏᴡɴᴇʀ  ❣️',url='https://t.me/Gal_GadotV1_bot')
             ],
                     [
-            InlineKeyboardButton('ʙᴜʏ   ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ   😊',url='https://t.me/MrSagar0')
+            InlineKeyboardButton('ʙᴜʏ   ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ   😊',url='https://t.me/Gal_GadotV1_bot')
             ],
                     [
                         InlineKeyboardButton("Cancel", callback_data = "cancel")
