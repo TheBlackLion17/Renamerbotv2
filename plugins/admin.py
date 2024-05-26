@@ -78,5 +78,5 @@ async def dft(bot,update):
 	usertype(int(user_id),"🦋 𝐅𝐫𝐞𝐞 𝐏𝐥𝐚𝐧 𝐔𝐬𝐞𝐫 🦋")
 	addpre(int(user_id))
 	await update.message.edit("ᴜꜱᴇʀ  ʟɪᴍɪᴛ  ʜᴀꜱ  ʙᴇᴇɴ  ʀᴇꜱᴇᴛ  ꜱᴜᴄᴄᴇꜱꜱꜱꜰᴜʟʟʏ.")
-	await bot.send_message(user_id,"ʏᴏᴜʀ  ʟɪᴍɪᴛ  ʜᴀꜱ  ʙᴇᴇɴ  ʀᴇꜱᴇᴛ  ꜱᴜᴄᴄᴇꜱꜱꜱꜰᴜʟʟʏ.\n\nᴄᴏɴᴛᴀᴄᴛ  <a href='https://t.me/MrSagar0'>**ᴏᴡɴᴇʀ**</a>  ꜰᴏʀ  ᴍᴏʀᴇ  ᴅᴇᴛᴀɪʟꜱ.")
+	await bot.send_message(user_id,"ʏᴏᴜʀ  ʟɪᴍɪᴛ  ʜᴀꜱ  ʙᴇᴇɴ  ʀᴇꜱᴇᴛ  ꜱᴜᴄᴄᴇꜱꜱꜱꜰᴜʟʟʏ.\n\nᴄᴏɴᴛᴀᴄᴛ  <a href='https://t.me/Gal_GadotV1_bot'>**ᴏᴡɴᴇʀ**</a>  ꜰᴏʀ  ᴍᴏʀᴇ  ᴅᴇᴛᴀɪʟꜱ.")
 
